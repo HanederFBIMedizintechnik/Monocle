@@ -22,6 +22,6 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       os: ubuntu-24.04
-      jdk: 26.0.0
+      jdk: 25.0.2
       openjfx: 26
     secrets: inherit
