@@ -17,19 +17,11 @@ permissions:
   security-events: write
 
 jobs:
-  #  testfx-4-ubuntu-22-04-jdk-8-jfx-8:
-  #    name: TestFX 4 - Ubuntu 22.04 - JDK 8 - JFX 8
-  #    uses: ./.github/workflows/build.yml
-  #    with:
-  #      os: ubuntu-22.04
-  #      jdk: 8
-  #      openjfx: 8
-  #    secrets: inherit
   monocle:
     name: Monocle
     uses: ./.github/workflows/build.yml
     with:
-      os: ubuntu-22.04
-      jdk: 21.0.2
-      openjfx: 21
+      os: ubuntu-24.04
+      jdk: 26.0.2
+      openjfx: 26
     secrets: inherit
