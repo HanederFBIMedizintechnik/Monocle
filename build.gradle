@@ -1,45 +1,7 @@
-//buildscript {
-//    repositories {
-//        mavenCentral()
-//        maven {
-//            url "https://plugins.gradle.org/m2/"
-//        }
-//    }
-//}
-
 plugins {
     id "java"
     id "maven-publish"
 }
-
-// print welcome message.
-//apply from: rootProject.file("gradle/welcome.gradle")
-//
-//wrapper {
-//    gradleVersion = '6.5.1'
-//    distributionUrl = "https://services.gradle.org/distributions/" +
-//        "gradle-${gradleVersion}-bin.zip"
-//}
-//
-//// task to print gradle and groovy versions.
-//task("versions", group: "help").doLast {
-//    println "Java version: ${System.properties["java.version"]}"
-//    println "Gradle version: ${gradle.gradleVersion}"
-//    println "Groovy version: ${GroovySystem.version}"
-//}
-//
-//// task to create main and test source directories.
-//task("initSourceDirs", group: "build setup").doLast {
-//    // ignore source directories for projects without source sets.
-//    if (!project.hasProperty("sourceSets")) { return }
-//
-//    // list all source directories.
-//    def sourceSets = project.sourceSets as SourceSetContainer
-//    def sourceDirs = sourceSets*.allSource.srcDirs.flatten() as List<File>
-//
-//    // create source directories, for those who not exists.
-//    for (sourceDir in sourceDirs) { sourceDir.mkdirs() }
-//}
 
 repositories {
     mavenCentral()
@@ -69,12 +31,12 @@ ext {
 }
 
 // java language level.
-sourceCompatibility = "21"
-targetCompatibility = "21"
+sourceCompatibility = "25"
+targetCompatibility = "25"
 
 dependencies {
-    implementation "org.openjfx:javafx-base:21.0.2:${platform}"
-    implementation "org.openjfx:javafx-graphics:21.0.2:${platform}"
+    implementation "org.openjfx:javafx-base:26.0.1:${platform}"
+    implementation "org.openjfx:javafx-graphics:26.0.1:${platform}"
 }
 
 // configure publish tasks.
@@ -128,4 +90,3 @@ jar {
         "Automatic-Module-Name": "org.testfx.monocle",
     )
 }
-
