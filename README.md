@@ -21,7 +21,7 @@ low-level access.
 ## Gradle
 
 ```gradle
-testCompile 'org.testfx:openjfx-monocle:26.0.1' // For OpenJFX 26
+testCompile 'org.testfx:openjfx-monocle:25.0.3' // For OpenJFX 25
 testCompile 'org.testfx:openjfx-monocle:21.0.2' // For OpenJFX 21
 testCompile 'org.testfx:openjfx-monocle:17.0.10' // For OpenJFX 17
 testCompile 'org.testfx:openjfx-monocle:11.0.2' // For OpenJFX 11
@@ -34,7 +34,7 @@ testCompile 'org.testfx:openjfx-monocle:jdk-8.0.372' // For Java 8
 <dependency>
     <groupId>org.testfx</groupId>
     <artifactId>openjfx-monocle</artifactId>
-    <version>26.0.1</version> <!-- 21.0.2 For OpenJFX 21, 17.0.10 For OpenJFX 17, 11.0.2 For OpenJFX 11, jdk-8.0.372 for Java 8 -->
+    <version>25.0.3</version> <!-- 21.0.2 For OpenJFX 21, 17.0.10 For OpenJFX 17, 11.0.2 For OpenJFX 11, jdk-8.0.372 for Java 8 -->
     <scope>test</scope>
 </dependency>
 ```
@@ -98,7 +98,7 @@ you can issue a release by doing the following:
 
 ```gradle
 testCompile "org.testfx:openjfx-monocle:[openjdk.version]" // For OpenJFX XX
-testCompile 'org.testfx:openjfx-monocle:26.0.1' // For OpenJFX 26
+testCompile 'org.testfx:openjfx-monocle:25.0.3' // For OpenJFX 25
 testCompile 'org.testfx:openjfx-monocle:21.0.2' // For OpenJFX 21
 testCompile 'org.testfx:openjfx-monocle:17.0.10' // For OpenJFX 17
 testCompile 'org.testfx:openjfx-monocle:11.0.2' // For OpenJFX 11

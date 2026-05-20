@@ -35,8 +35,8 @@ sourceCompatibility = "25"
 targetCompatibility = "25"
 
 dependencies {
-    implementation "org.openjfx:javafx-base:26.0.1:${platform}"
-    implementation "org.openjfx:javafx-graphics:26.0.1:${platform}"
+    implementation "org.openjfx:javafx-base:25.0.3:${platform}"
+    implementation "org.openjfx:javafx-graphics:25.0.3:${platform}"
 }
 
 // configure publish tasks.
