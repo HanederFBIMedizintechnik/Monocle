@@ -30,20 +30,22 @@ ext {
     platform = getOSName()
 }
 
-// java language level.
-sourceCompatibility = "25"
-targetCompatibility = "25"
-
 dependencies {
-    implementation "org.openjfx:javafx-base:26.0.1:${platform}"
-    implementation "org.openjfx:javafx-graphics:26.0.1:${platform}"
+    implementation "org.openjfx:javafx-base:26.0.2:${platform}"
+    implementation "org.openjfx:javafx-graphics:26.0.2:${platform}"
 }
 
 // configure publish tasks.
 apply from: rootProject.file("gradle/publish-pom.gradle")
 
+// java language level.
+java {
+    sourceCompatibility = "25"
+    targetCompatibility = "25"
+}
+
 // task to create jar with source code.
-task("sourceJar", type: Jar) {
+tasks.register('sourceJar', Jar) {
     group = "Build"
     description = "An archive of the source code"
     archiveClassifier = "sources"
@@ -51,7 +53,7 @@ task("sourceJar", type: Jar) {
 }
 
 // task to create jar with javadocs.
-task("javadocJar", type: Jar) {
+tasks.register('javadocJar', Jar) {
     group = "Build"
     description = "An archive of the javadoc"
     archiveClassifier = "javadoc"
@@ -89,4 +91,8 @@ jar {
         "Implementation-Vendor": project.vendor,
         "Automatic-Module-Name": "org.testfx.monocle",
     )
+}
+
+wrapper {
+    distributionType = "ALL"
 }
