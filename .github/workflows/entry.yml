@@ -23,5 +23,5 @@ jobs:
     with:
       os: ubuntu-24.04
       jdk: 25.0.4
-      openjfx: 24
+      openjfx: 25
     secrets: inherit
